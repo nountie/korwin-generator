@@ -1,0 +1,148 @@
+* {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+html, body {
+  margin: 0;
+  padding: 0;
+  height: 100%;
+  font-family: "Ubuntu";
+  overflow-x: hidden;
+}
+
+.container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  height: 100%;
+  background: #111;
+}
+
+.korwin-box {
+  -webkit-box-shadow: 4px 4px 4px 0px rgba(0, 0, 0, 0.7);
+          box-shadow: 4px 4px 4px 0px rgba(0, 0, 0, 0.7);
+  border-radius: 8px;
+  border: 12px solid #fff;
+  width: 800px;
+  height: 800px;
+  margin-top: 100px;
+  background: url(img/korwin.jpg);
+  background-position: center;
+  background-size: cover;
+  position: relative;
+}
+
+.bubble {
+  position: absolute;
+  left: -120px;
+  top: -30%;
+  -webkit-transform: rotate(10deg) translate(300px, 200px);
+          transform: rotate(10deg) translate(300px, 200px);
+  opacity: 0;
+  visibility: hidden;
+  z-index: -1;
+  -webkit-transition: all .5s ease-in-out;
+  transition: all .5s ease-in-out;
+}
+
+.bubble--active {
+  -webkit-transform: rotate(0deg) translate(0px, 0px);
+          transform: rotate(0deg) translate(0px, 0px);
+  opacity: 1;
+  visibility: visible;
+  z-index: 1;
+}
+
+.bubble-bigger {
+  left: -165px;
+  top: -28%;
+}
+
+.bubble-bigger .bubble-img {
+  width: 700px;
+}
+
+.bubble-bigger .bubble-text {
+  width: 530px;
+  top: 39%;
+}
+
+.bubble-img {
+  height: 600px;
+  width: 600px;
+}
+
+.bubble-text {
+  font-size: 24px;
+  font-weight: 700;
+  width: 430px;
+  line-height: 1.8;
+  position: absolute;
+  top: 39%;
+  -webkit-transform: translateY(-50%);
+          transform: translateY(-50%);
+  left: 90px;
+}
+
+.btn {
+  font-weight: 700;
+  letter-spacing: 3px;
+  padding: 20px 35px;
+  position: absolute;
+  bottom: 40px;
+  left: 40px;
+  border-radius: 8px;
+  font-size: 40px;
+  text-transform: uppercase;
+  background: #033e75;
+  color: #fff;
+  outline: none;
+  border: 1px solid #111;
+  text-shadow: 2px 2px 2px rgba(0, 0, 0, 0.9), 2px 2px 2px rgba(0, 0, 0, 0.9);
+}
+
+.btn:hover {
+  cursor: pointer;
+}
+
+@-webkit-keyframes show {
+  from {
+    -webkit-transform: rotate(10deg) translate(400px, 200px);
+            transform: rotate(10deg) translate(400px, 200px);
+    opacity: 0;
+    visibility: hidden;
+    z-index: -1;
+  }
+  to {
+    -webkit-transform: rotate(0deg) translate(0px, 0px);
+            transform: rotate(0deg) translate(0px, 0px);
+    opacity: 1;
+    visibility: visble;
+    z-index: 1;
+  }
+}
+
+@keyframes show {
+  from {
+    -webkit-transform: rotate(10deg) translate(400px, 200px);
+            transform: rotate(10deg) translate(400px, 200px);
+    opacity: 0;
+    visibility: hidden;
+    z-index: -1;
+  }
+  to {
+    -webkit-transform: rotate(0deg) translate(0px, 0px);
+            transform: rotate(0deg) translate(0px, 0px);
+    opacity: 1;
+    visibility: visble;
+    z-index: 1;
+  }
+}
+/*# sourceMappingURL=style.css.map */
